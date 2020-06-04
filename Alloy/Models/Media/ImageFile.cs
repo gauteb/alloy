@@ -1,5 +1,6 @@
 using EPiServer.Core;
 using EPiServer.DataAnnotations;
+using EPiServer.Framework.Blobs;
 using EPiServer.Framework.DataAnnotations;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,5 +17,10 @@ namespace Alloy.Models.Media
         /// The copyright.
         /// </value>
         public virtual string Copyright { get; set; }
+
+        //public override Blob BinaryData
+        //{
+        //    get { return BinaryData; }
+        //}
     }
 }

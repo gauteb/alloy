@@ -392,6 +392,11 @@
             The enable tracking.
             </summary>
         </member>
+        <member name="P:EPiServer.Find.Configuration.UseLegacySorting">
+            <summary>
+            The enable tracking.
+            </summary>
+        </member>
         <member name="P:EPiServer.Find.Configuration.ServiceUrl">
             <summary>
             The service URL.

@@ -17428,7 +17428,7 @@
             </summary>
       <exclude />
     </member>
-    <member name="M:EPiServer.Web.Routing.Internal.VirtualPathHostResolver.#ctor(System.Func{System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary,System.String},EPiServer.ServiceLocation.ServiceAccessor{EPiServer.Web.SiteDefinition},EPiServer.Web.ISiteDefinitionRepository)">
+    <member name="M:EPiServer.Web.Routing.Internal.VirtualPathHostResolver.#ctor(System.Func{System.Web.Routing.RequestContext,System.Web.Routing.RouteValueDictionary,System.String},EPiServer.ServiceLocation.ServiceAccessor{EPiServer.Web.SiteDefinition},EPiServer.Web.ISiteDefinitionRepository,EPiServer.Web.Routing.RoutingOptions)">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Initializes a new instance of the <see cref="T:EPiServer.Web.Routing.Internal.VirtualPathHostResolver" /> class.
             </summary>
       <exclude />
@@ -17885,12 +17885,9 @@
             </summary>
       <exclude />
     </member>
-    <member name="M:EPiServer.Web.Routing.Segments.Internal.PartialSegment.#ctor(System.String,EPiServer.IContentLoader,EPiServer.Web.Routing.PartialRouteHandler)">
+    <member name="M:EPiServer.Web.Routing.Segments.Internal.PartialSegment.#ctor(System.String,EPiServer.IContentLoader,EPiServer.Web.Routing.PartialRouteHandler,EPiServer.ServiceLocation.ServiceAccessor{EPiServer.Web.Routing.RoutingOptions})">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. Initializes a new instance of the <see cref="T:EPiServer.Web.Routing.Segments.Internal.PartialSegment" /> class.
             </summary>
-      <param name="name">The name.</param>
-      <param name="contentLoader">The content loader.</param>
-      <param name="partialRouteHandler">The partial route handler.</param>
       <exclude />
     </member>
     <member name="M:EPiServer.Web.Routing.Segments.Internal.PartialSegment.RouteDataMatch(EPiServer.Web.Routing.Segments.SegmentContext)">
@@ -19732,6 +19729,21 @@
       <remarks>Default value is true.</remarks>
       <value>
         <c>true</c> if a trailing slash should be used; otherwise, <c>false</c>.</value>
+    </member>
+    <member name="P:EPiServer.Web.Routing.RoutingOptions.EnableRecursivePartialRouting">
+      <summary>
+            Specifies if the result of a successful partial routing should be propagated to further partial routing.
+            </summary>
+    </member>
+    <member name="P:EPiServer.Web.Routing.RoutingOptions.UsePrimaryHostForEditAndPreviewUrls">
+      <summary>
+            Specifies that the <see cref="T:EPiServer.Web.HostDefinitionType" /> that is <see cref="F:EPiServer.Web.HostDefinitionType.Primary" /> should be used when generating edit and preview urls.
+            </summary>
+    </member>
+    <member name="M:EPiServer.Web.Routing.RoutingOptions.ConfigureForExternalTemplates">
+      <summary>
+            Configures routing to support that templates are deployed in a separate application
+            </summary>
     </member>
     <member name="T:EPiServer.Web.Routing.SupportedDirection">
       <summary>
@@ -21735,6 +21747,11 @@
             </summary>
       <param name="content">The content item</param>
       <returns>true if content is routable else false</returns>
+      <exclude />
+    </member>
+    <member name="P:EPiServer.Web.Internal.Net45HostResolver.HostName">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <inheritdoc />
       <exclude />
     </member>
     <member name="T:EPiServer.Web.Internal.NullRewritePipe">

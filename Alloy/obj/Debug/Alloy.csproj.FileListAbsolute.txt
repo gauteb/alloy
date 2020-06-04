@@ -112,7 +112,6 @@ C:\src\Alloy\Alloy\bin\System.Web.Razor.xml
 C:\src\Alloy\Alloy\bin\System.Web.WebPages.xml
 C:\src\Alloy\Alloy\bin\System.Web.WebPages.Deployment.xml
 C:\src\Alloy\Alloy\bin\System.Web.WebPages.Razor.xml
-C:\src\Alloy\Alloy\obj\Debug\Alloy.csprojAssemblyReference.cache
 C:\src\Alloy\Alloy\obj\Debug\Alloy.csproj.CopyComplete
 C:\src\Alloy\Alloy\obj\Debug\Alloy.dll
 C:\src\Alloy\Alloy\obj\Debug\Alloy.pdb

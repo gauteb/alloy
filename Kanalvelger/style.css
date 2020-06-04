@@ -1,0 +1,9 @@
+.test-css {
+  background-color: yellow;
+}
+
+.channel-box {
+  box-shadow: 0px 2px 9px #dadada;
+  width: 184px;
+  height: 184px;
+}

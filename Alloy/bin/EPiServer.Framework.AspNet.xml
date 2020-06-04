@@ -2902,6 +2902,14 @@
       <param name="request">The request object.</param>
       <param name="response">The response object.</param>
     </member>
+    <member name="M:EPiServer.Framework.Web.AspNetAntiForgery.#ctor(System.Web.HttpRequestBase,System.Web.HttpResponseBase,EPiServer.Framework.Web.AspNetAntiForgeryOptions)">
+      <summary>
+            Initializes a new instance of the <see cref="T:EPiServer.Framework.Web.AspNetAntiForgery" /> class.
+            </summary>
+      <param name="request">The request object.</param>
+      <param name="response">The response object.</param>
+      <param name="antiForgeryOptions">The anti-forgery options.</param>
+    </member>
     <member name="P:EPiServer.Framework.Web.AspNetAntiForgery.CookieName">
       <summary>
             Gets the name of the anti-forgery cookie.
@@ -2957,6 +2965,11 @@
             Validates the current request by checking that the hidden field can be validated with the cookie data.
             </summary>
     </member>
+    <member name="M:EPiServer.Framework.Web.AspNetAntiForgery.ValidateOrigin">
+      <summary>
+            Checking the current request for same origin.
+            </summary>
+    </member>
     <member name="M:EPiServer.Framework.Web.AspNetAntiForgery.ValidateToken(System.String)">
       <summary>
             Validates the string representation of the token against the anti-forgery cookie.
@@ -2965,6 +2978,41 @@
       <remarks>
             This is primarily used in a non-WebForms scenario. For Web Forms you should call ValidateField instead.
             </remarks>
+    </member>
+    <member name="T:EPiServer.Framework.Web.SameSiteType">
+      <summary>
+            Defines SameSite attribute values.
+            </summary>
+    </member>
+    <member name="F:EPiServer.Framework.Web.SameSiteType.None">
+      <summary>
+            No type is specified.
+            </summary>
+    </member>
+    <member name="F:EPiServer.Framework.Web.SameSiteType.Lax">
+      <summary>
+            The cookie can be sent with cross-site GET requests which cause top level navigation.
+            </summary>
+    </member>
+    <member name="F:EPiServer.Framework.Web.SameSiteType.Strict">
+      <summary>
+            The cookie will not be sent in all cross-site browsing context.
+            </summary>
+    </member>
+    <member name="T:EPiServer.Framework.Web.AspNetAntiForgeryOptions">
+      <summary>
+            Contains options for anti forgery.
+            </summary>
+    </member>
+    <member name="P:EPiServer.Framework.Web.AspNetAntiForgeryOptions.EnableSameOriginCheck">
+      <summary>
+            Determines whether <see cref="T:EPiServer.Framework.Web.AspNetAntiForgery" /> should check request for same origin or not.
+            </summary>
+    </member>
+    <member name="P:EPiServer.Framework.Web.AspNetAntiForgeryOptions.SameSiteAttributeValue">
+      <summary>
+            Indicate the value for the SameSite attribute of the cookie.
+            </summary>
     </member>
     <member name="T:EPiServer.Framework.Web.Internal.AsyncTransmitContext">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice. It contians async data for transmitting of files

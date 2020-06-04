@@ -29030,6 +29030,11 @@
             The unique identifier of type
             </summary>
     </member>
+    <member name="P:EPiServer.DataAbstraction.PropertyDefinitionType.GUID">
+      <summary>
+            Gets or sets the optional globally unique identifier for this property definition type instance.
+            </summary>
+    </member>
     <member name="P:EPiServer.DataAbstraction.PropertyDefinitionType.DataType">
       <summary>
             The actual data type used by this type
@@ -34763,12 +34768,13 @@
             </summary>
       <param name="parentLink">The parent link.</param>
       <param name="urlSegment">The URL segment.</param>
-      <param name="language">The language</param>
+      <param name="language">The preferred language</param>
       <returns>
             The content instance that matches <paramref name="urlSegment" /> or null if no match.
             </returns>
       <remarks>
-            It is the passed in <paramref name="language" /> that is responsible to handle fallback and replacement settings for language.
+            The <paramref name="language" /> parameter is only considered when there are multiple content instances matching the <paramref name="urlSegment" />.
+            In such cases, content matching the provided language will be preferred ahead of other matches. If none of the content instances matches the language, one of the other instances will be returned.
             </remarks>
     </member>
     <member name="M:EPiServer.IContentLoader.GetBySegment(EPiServer.Core.ContentReference,System.String,EPiServer.Core.LoaderOptions)">
@@ -34783,7 +34789,8 @@
             The content instance that matches <paramref name="urlSegment" /> or null if no match.
             </returns>
       <remarks>
-            It is the passed in <paramref name="settings" /> that is responsible to handle fallback and replacement settings for language.
+            If LoaderOption contain a <see cref="T:EPiServer.Core.LanguageLoaderOption" />. Then the <see cref="T:EPiServer.Core.LanguageLoaderOption" /> is only considered when there are multiple content instances matching the <paramref name="urlSegment" />.
+            In such cases, content matching the provided language will be preferred ahead of other matches. If none of the content instances matches the language, one of the other instances will be returned.
             </remarks>
     </member>
     <member name="M:EPiServer.IContentLoader.TryGet``1(EPiServer.Core.ContentReference,``0@)">
@@ -35178,6 +35185,11 @@
       <exclude />
     </member>
     <member name="T:EPiServer.Initialization.Internal.ContentLanguageSettingsEventInitialization">
+      <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
+      <internal-api />
+      <exclude />
+    </member>
+    <member name="T:EPiServer.Initialization.Internal.EnsureRemoteVersionKeyInitialization">
       <summary>Unsupported INTERNAL API! Not covered by semantic versioning; might change without notice.</summary>
       <internal-api />
       <exclude />
@@ -37395,6 +37407,23 @@
       <summary>
             Initializes a new instance of the <see cref="T:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute" /> class.
             </summary>
+    </member>
+    <member name="P:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.GUID">
+      <summary>
+            Gets or sets the unique id for the corresponding <see cref="T:EPiServer.DataAbstraction.PropertyDefinitionType" />.
+            </summary>
+      <remarks>Use <see cref="M:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.GetGUID" /> to check if a value has been assigned.</remarks>
+      <value>The unique id of the <see cref="T:EPiServer.DataAbstraction.PropertyDefinitionType" />. Default value is <c>null</c>.</value>
+    </member>
+    <member name="M:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.GetGUID">
+      <summary>
+            Returns the nullable Guid for the corresponding property <see cref="P:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.GUID" />. 
+            </summary>
+      <remarks>
+            If the usage of the attribute has not set the <see cref="P:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.GUID" /> property this will not have any value.
+            </remarks>
+      <returns>
+      </returns>
     </member>
     <member name="M:EPiServer.PlugIn.PropertyDefinitionTypePlugInAttribute.Match(System.Object)">
       <summary>
