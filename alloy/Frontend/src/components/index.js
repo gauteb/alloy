@@ -1,3 +1,3 @@
-import Test from "./InitialTest/index.jsx";
+import Test from "./InitialTest/index.tsx";
 
 export default {Test};

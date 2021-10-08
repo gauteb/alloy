@@ -3,4 +3,4 @@
 
 @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })
 
-@Html.React("Components.Test", new { })
+@Html.React("Components.Test", new { message = "testmessage" })
