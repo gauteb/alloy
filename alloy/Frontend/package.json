@@ -1,0 +1,25 @@
+{
+  "name": "pst-intranett",
+  "version": "1.0.0",
+  "description": "Frontendcode for pst-intranett",
+  "main": "app.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-react": "^7.14.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
