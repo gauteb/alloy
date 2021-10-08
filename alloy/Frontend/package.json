@@ -4,7 +4,7 @@
   "description": "Frontendcode for pst-intranett",
   "main": "app.js",
   "scripts": {
-    "webpack": "webpack",
+    "dev": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
